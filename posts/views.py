@@ -3,8 +3,7 @@ from .models import Post
 
 
 def post_list (repuest):
-    pass
-
+    data = Post.objects.all()
 
 
 def post_detail(repuest):
