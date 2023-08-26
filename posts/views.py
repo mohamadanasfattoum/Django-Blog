@@ -8,3 +8,5 @@ def post_list ():
 
 
 
+def post_detail():
+    pass
