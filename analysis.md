@@ -21,7 +21,7 @@ form.py
 
 
 views.py :
-    all_posts :
+    post_list : :
 
 
 
