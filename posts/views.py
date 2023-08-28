@@ -15,6 +15,9 @@ def post_detail(request,post_id):
 
 def add_post(request):
     if request.method=='Post': 
-        form = PostForm(request.Post)
+        form = PostForm(request.Post, request.FILES)
 
+
+    else:
+        PostForm()
     return render(request,'add_post.html',{'form':form})
