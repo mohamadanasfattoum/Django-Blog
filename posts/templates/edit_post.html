@@ -1,1 +1,13 @@
-<h2>Edit Post</h2>
+<h1>Edit Post</h1>
+
+<a href="/blog/">Add New Post</a>
+
+<hr>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    {{form}}
+    <input type="submit" value="Edit New Post">
+
+</form>
