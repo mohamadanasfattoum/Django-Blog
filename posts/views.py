@@ -1,5 +1,5 @@
 from django.shortcuts import render , redirect
-from .models import Post
+from .models import Post, Comment
 from .forms import PostForm
 
 def post_list (request):
@@ -9,7 +9,8 @@ def post_list (request):
 
 def post_detail(request,post_id):
     data = Post.objects.get(id=post_id)
-    return render(request,'post_detail.html',{'post':data})
+    comment_data = Comment.objects.all()
+    return render(request,'post_detail.html',{'post':data},{'answer':comment_data})
 
 
 
@@ -27,6 +28,7 @@ def add_post(request):
 
 def edit_post(request,post_id):
     data = Post.objects.get(id=post_id)
+    
     if request.method == 'POST':
         form = PostForm(request.POST, request.FILES, instance=data)
         if form.is_valid():

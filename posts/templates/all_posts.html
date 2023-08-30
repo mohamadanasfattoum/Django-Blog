@@ -8,7 +8,7 @@
 <ul>
     {% for post in posts %}
 
-        <li>{{post}}</li>
+        <li><a href="/blog/{{post.id}}/">{{post}}</a></li>
 
     {% endfor %}
 </ul>
