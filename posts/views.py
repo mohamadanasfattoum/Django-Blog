@@ -10,7 +10,7 @@ def post_list (request):
 def post_detail(request,post_id):
     data = Post.objects.get(id=post_id)
     comment_data = Comment.objects.all()
-    return render(request,'post_detail.html',{'post':data , 'comment-d':comment_data})
+    return render(request,'post_detail.html',{'post':data , 'comment':comment_data})
 
 
 

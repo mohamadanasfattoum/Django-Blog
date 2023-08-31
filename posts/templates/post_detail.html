@@ -20,16 +20,9 @@
     {% for comment in comment %} 
 
 
-        <h5>{{comment.comemnt}}</h5>
-
-
+        <h5>{{comment.comment}}</h5>
 
 
 
     {% endfor %}
 </ul>
-
-
-{% if post.image %}
-    <img src="{{post.image.url}}" alt="">
-{% endif %}
