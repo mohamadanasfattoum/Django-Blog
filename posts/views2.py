@@ -14,7 +14,13 @@ class PostDetail(generic.DetailView):
 
 
 
-class PostCreate(generic.CreateViewView):
+class PostCreate(generic.CreateView):
+    model = Post
+    fields = '__all__'
+    success_url= '/blog/'
+
+
+class PostUpdet(generic.CreateView):
     model = Post
     fields = '__all__'
     success_url= '/blog/'
