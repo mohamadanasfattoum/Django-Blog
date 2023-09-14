@@ -27,5 +27,5 @@ class PostUpdet(generic.UpdateView):
     template_name='posts/edit_post.html'
 
 
-class PostUpdet(generic.DeleteView):
+class PostDelete(generic.DeleteView):
     model = Post
