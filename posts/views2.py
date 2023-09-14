@@ -24,3 +24,4 @@ class PostUpdet(generic.CreateView):
     model = Post
     fields = '__all__'
     success_url= '/blog/'
+    template_name='posts/edit_post.html'
