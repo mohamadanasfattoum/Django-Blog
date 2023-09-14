@@ -20,7 +20,7 @@ class PostCreate(generic.CreateView):
     success_url= '/blog/'
 
 
-class PostUpdet(generic.CreateView):
+class PostUpdet(generic.UpdateView):
     model = Post
     fields = '__all__'
     success_url= '/blog/'
