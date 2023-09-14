@@ -8,5 +8,6 @@ class PostList(generic.ListView):
 
 
 
-class PostDetail(generic.DetailViewView):
+class PostDetail(generic.DetailView):
     model = Post
+    success_url= '/blog/'

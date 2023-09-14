@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/',PostList.as_view()),
     path('blog/add/',add_post),
-    path('blog/<int:post_id>/',PostDetail.as_view()),
+    path('blog/<int:pk>/',PostDetail.as_view()),
     path('blog/<int:post_id>/edit/',edit_post),
     path('blog/<int:post_id>/delete/',delete_post),
 ]
