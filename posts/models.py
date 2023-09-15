@@ -9,6 +9,7 @@ from django.utils import timezone
 class Post (models.Model):
     auther = models.ForeignKey(User,related_name='post_auther',on_delete=models.SET_NULL,null=True)
     title= models.CharField(max_length=120)
+    subtitle = models.CharField(max_length=1000, null=True)
     comment = models.TextField(max_length=5000)
     publish_date = models.DateTimeField(default= timezone.now)
     tags = TaggableManager()
