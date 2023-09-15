@@ -14,6 +14,7 @@ class Post (models.Model):
     publish_date = models.DateTimeField(default= timezone.now)
     tags = TaggableManager()
     image = models.ImageField(upload_to='posts', null=True) 
+    slug = models.SlugField(null=True,blank=True)
 
 
     def __str__(self) -> str:
