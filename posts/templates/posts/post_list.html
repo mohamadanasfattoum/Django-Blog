@@ -32,7 +32,11 @@
                                 <a href="#!">{{post.auther}}</a>
                                 on {{post.publish_date|date:"A f F t, o "}}
                             </p>
-                        </div>            
+
+                            <a class="btn btn-primary" type="button" href="/blog/{{post.slug}}/edit/" role="button">Edit Post</a>
+                            <a class="btn btn-danger" type="button" href="/blog/{{post.slug}}/delete/" role="button">Delete Post</a>
+                        </div> 
+
                     {% endfor %}
 
                     <hr class="my-4" />
