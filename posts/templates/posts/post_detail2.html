@@ -1,0 +1,31 @@
+<h2>{{post}}</h2>
+
+<a href="/blog/">To All Posts</a>
+<hr>
+
+
+
+<a href="/blog/{{post.id}}/edit/">Edit Post</a>
+<a href="/blog/{{post.id}}/delete/">Delete Post</a>
+<hr>
+
+
+<p>{{post.comment}}</p>
+
+
+
+{% if post.image %}
+    <img src="{{post.image.url}}" alt="">
+{% endif %}
+
+
+<ul>
+    {% for comment in comment %} 
+
+        <h3>Comment Title:{{comment}}</h3>
+        <h5>{{comment.comment}}</h5>
+
+
+
+    {% endfor %}
+</ul>
