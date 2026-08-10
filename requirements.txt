@@ -1,6 +1,6 @@
 asgiref==3.7.2
 bleach==6.4.0
-Django==4.2.30
+Django==5.2.16
 django-summernote==0.8.20.0
 django-taggit==4.0.0
 Pillow==12.3.0
